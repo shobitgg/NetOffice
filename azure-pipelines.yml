@@ -29,7 +29,7 @@ steps:
 - task: AzureKeyVault@2
   inputs:
     azureSubscription: 'Kyndryl course Modernops'
-    KeyVaultName: 
+    KeyVaultName: 'petstore-vault'
     SecretsFilter: '*'
     RunAsPreJob: true
 
