@@ -19,7 +19,7 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'runtime'
-    version: '6.x'
+    version: '5.x'
     installationPath: '$System.DefaultWorkingDirectory)/dotnet'
 - task: DotNetCoreCLI@2
   inputs:
