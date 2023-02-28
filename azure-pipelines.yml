@@ -24,7 +24,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    arguments: 'tool install --global azuresigntool '
+    arguments: 'tool install --global azuresigntool --version 3.0.0'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: AzureKeyVault@2
   inputs:
