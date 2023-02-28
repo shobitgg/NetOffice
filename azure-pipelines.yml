@@ -18,9 +18,9 @@ steps:
 - task: NuGetToolInstaller@1
 - task: UseDotNet@2
   inputs:
-    packageType: 'runtime'
-    version: '4.x'
-    installationPath: '$System.DefaultWorkingDirectory)/dotnet'
+    packageType: 'sdk'
+    version: '5.x'
+    installationPath: '$(System.DefaultWorkingDirectory)/dotnet'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
