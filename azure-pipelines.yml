@@ -18,8 +18,8 @@ steps:
 - task: NuGetToolInstaller@1
 - task: UseDotNet@2
   inputs:
-    packageType: 'sdk'
-    version: '6.x'
+    packageType: 'runtime'
+    version: '4.x'
     installationPath: '$System.DefaultWorkingDirectory)/dotnet'
 - task: DotNetCoreCLI@2
   inputs:
