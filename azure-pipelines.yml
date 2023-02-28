@@ -19,12 +19,18 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '5.x'
+    version: '3.x'
     installationPath: '$(System.DefaultWorkingDirectory)/dotnet'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    arguments: 'tool install --global azuresigntool --version 3.0.0'
+    arguments: 'tool install --global azuresigntool '
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    arguments: 'tool update --global azuresigntool '
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 - task: AzureKeyVault@2
   inputs:
