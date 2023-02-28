@@ -39,7 +39,11 @@ steps:
     KeyVaultName: 'petstore-vault'
     SecretsFilter: '*'
     RunAsPreJob: true
-
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(System.DefaultWorkingDirectory)'
+    Contents: '**'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
 # - task: VSBuild@1
 #   inputs:
 #     solution: '$(solution)'
